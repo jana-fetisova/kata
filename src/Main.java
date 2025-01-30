@@ -92,6 +92,23 @@ public class Main {
             }
         }
 
+        String[] correctRomanNums = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
+        boolean num1IsCorrect = false;
+        boolean num2IsCorrect = false;
+        if(romFlag) {
+            for(int i = 0; i < correctRomanNums.length; i++) {
+                if(correctRomanNums[i].equals(num1)) {
+                    num1IsCorrect = true;
+                }
+                if(correctRomanNums[i].equals(num2)) {
+                    num2IsCorrect = true;
+                }
+            }
+            if(!num1IsCorrect | !num2IsCorrect) {
+                throw new NumberFormatException("Введите корректные римские числа");
+            }
+        }
+        
         // переводим первое число в int
         int intnum1 = 0;
         if(arabFlag==true) {
