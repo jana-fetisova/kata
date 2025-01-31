@@ -279,8 +279,8 @@ public class Main {
             }
         }
 
-        if(intnum1 > 10 | intnum2 > 10) {
-            throw new NumberFormatException("Каждое число должно быть не больше 10");
+        if(intnum1 > 10 | intnum2 > 10 | intnum1 < 1 | intnum2 < 1) {
+            throw new NumberFormatException("Каждое число должно быть строго от 1 до 10");
         }
 
         // производим операцию над двумя числами
